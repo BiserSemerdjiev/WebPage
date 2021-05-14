@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learn HTML</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+
+<div class="header">
+<img src="logo.png" alt="HTML Logo" width="8%" height="10%">
+<p style="position:absolute; bottom:0; right:0; padding-right: 13%; color:#009966; font-size: 50px">Learn HTML</p>
+</div>
+
+<div id="navbar">
+  <a href="index.html">Начало</a>
+  <a class="active" href="javascript:void(0)">Въведение</a>
+  <a href="text.html">Текст</a>
+  <a href="colors.html">Цветове</a>
+  <a href="lists.html">Списъци</a>
+  <a href="MetaTags.html">META тагове</a>
+  <a href="pictures.html">Изображения</a>
+  <a href="tables.html">Таблици</a>
+  <a href="Hyperlinks.html">Хиперлинкове</a>
+  <a href="frames.html">Рамки</a>
+</div>
+
+
+<div class="content">
+<p>В HTML документите има няколко задължителни тага. Първият от тях е <text><&#33;DOCTYPE html></text>. Друга двойка задължителни тагове са <text>&lt;html&gt;</text> и <text><&#47;html></text>. Тези тагове задават начало и край на HTML документа. Структурата на един HTML документ е следната:</p>
+<pre>
+	<div class="box">
+&lt;!DOCTYPE html&gt;
+&lt;HTML&gt;
+  &lt;HEAD&gt;
+   &lt;TITLE&gt;First page with HTML&lt;/TITLE&gt;
+  &lt;/HEAD&gt;
+&lt;BODY&gt;
+&lt;/BODY&gt;
+&lt;/HTML&gt;
+	</div>
+</pre>
+<p>Декларацията <text>&lt;!DOCTYPE&gt;</text> помага на браузъра да покаже уеб страницата по максимално коректен начин. В интернет пространството има много различни видове документи, а браузърите могат да четат и други освен HTML. Браузъра може да покаже един HTML документ, на 100% коректно, само ако знае HTML версията, и използвания тип на документа. Съдържанието между двата тага <text>&lt;html&gt;</text> и <text>&lt;/html&gt;</text> е същината на уеб страницата
+(с въвеждането на HTML5 <text>&lt;html&gt;</text> тага може да се пропусне и пак ще имаме валиден документ)</p>
+<p>Тагът <text>&lt;head&gt;</text> има по подразбиране зададено свойството display със стойност none. Това означава, че всичко което е вложено в елемента остава невидимо за потребителя на страницата (освен <text>&lt;title&gt;</text> тага, но той се изобразява извън самата страница - в бара на браузъра). Елементите, които се поставят в <text>&lt;head&gt;</text> тага са такива, които предоставят някаква стойност за браузъра или други машини(ботове). Например търсещата машина на Гугъл разбира много неща за нашият HTML документ точно с помощта на тези тагове. Тагът <text>&lt;title&gt;</text> дефинира заглавието на документа. Той се изисква във всеки HTML документ, но ако не присъства в HTML5 то документа си остава напълно валиден.</p>
+<p>Елемента <text>&lt;body&gt;</text> задава "тялото" в един HTML документ. Елемента има начален таг <text>&lt;body&gt;</text> и краен таг <text>&lt;/body&gt;</text>. Съдържанието на елемента е друг HTML елемент(например p елемент). В <text>&lt;body&gt;</text> елемента се въвежда видимата част на документа, така всички останали елементи са вложени в него.</p>
+<p>Отворете редактора и напишете или копирайте HTML код в отворения прозорец. Запишете файла с разширение <text>.html</text> или <text>.htm</text>. Например:</p>
+<pre>
+	<div class="box">
+&lt;!DOCTYPE html&gt;
+&lt;HTML&gt;
+  &lt;HEAD&gt;
+   &lt;TITLE&gt;Първа страница&lt;/TITLE&gt;
+  &lt;/HEAD&gt;
+&lt;BODY&gt;
+  &lt;p&gt;Това е моят първи параграф.&lt;/p&gt;
+&lt;/BODY&gt;
+&lt;/HTML&gt;
+	</div>
+</pre>
+<p>Елемента <text>&lt;p&gt;</text> задава параграф в HTML документа. Той има начален таг <text>&lt;p&gt;</text> и краен таг <text>&lt;/p&gt;</text>. Съдържанието на елемента е текстът: Това е моя първи параграф. Повечето HTML елементи могат да са вложени в други HTML елементи. Това означава, че един елемент може в себе си да съдържа един или повече други елементи. HTML документите се състоят изцяло от вложени HTML елементи, но трябва да се спазва последователността на двойките тагове. Например неправилно е да се напише следното:</p>
+<pre>
+	<div class="box">
+ <span style="color: #ff3333">Неправилно</span>           <text>Правилно</text>
+   &lt;HTML&gt;	       &lt;HTML&gt;
+   &lt;HEAD&gt;	       &lt;HEAD&gt;
+   &lt;/HTML&gt;	       &lt;/HEAD&gt;
+   &lt;/HEAD&gt;	       &lt;/HTML&gt;
+	</div>
+</pre>
+<p>Затварящия елемент <text>&lt;/HEAD&gt;</text> трябва да бъде преди затварящия <text>&lt;/HTML&gt;</text>. Трябва да се получи нещо като огледален образ, първия затварящ трябва да отговаря на последния отварящ.</p>
+
+</div>
+  <script src="javamenu.js"></script>
+</body>
+</html>

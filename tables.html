@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learn HTML</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+
+<div class="header">
+<img src="logo.png" alt="HTML Logo" width="8%" height="10%">
+<p style="position:absolute; bottom:0; right:0; padding-right: 13%; color:#009966; font-size: 50px">Learn HTML</p>
+</div>
+
+<div id="navbar">
+  <a href="index.html">Начало</a>
+  <a href="FirstSteps.html">Въведение</a>
+  <a href="text.html">Текст</a>
+  <a href="colors.html">Цветове</a>
+  <a href="lists.html">Списъци</a>
+  <a href="MetaTags.html">META тагове</a>
+  <a href="pictures.html">Изображения</a>
+  <a class="active" href="javascript:void(0)">Таблици</a>
+  <a href="Hyperlinks.html">Хиперлинкове</a>
+  <a href="frames.html">Рамки</a>
+</div>
+
+
+<div class="content">
+  <p>Таблиците в HTML се задават с тагове <text>&lt;table&gt;</text> и <text>&lt;/table&gt;</text> - съответно за начало и за край. Таблиците се поделят на редове: <text>&lt;tr&gt;</text> и <text>&lt;/tr&gt;</text>, а всеки ред може да се подели на отделни клетки, описани с <text>&lt;td&gt;</text> и <text>&lt;/td&gt;</text>. Самото съдържание на клетката може да бъде текст, изображение, списъци или дори други таблици. Описанието на таблицата става ред по ред, като за всеки ред клетките се описват една по една от ляво на дясно. Например:</p>
+<table border="2">
+  <tr>
+    <th>Month</th>
+    <th>Savings</th>
+  </tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td>
+  </tr>
+</table>
+
+  <pre>
+	<div class="box">
+&lt;table border="2"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Month&lt;/th&gt;
+    &lt;th&gt;Savings&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;January&lt;/td&gt;
+    &lt;td&gt;$100&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+	</div>
+</pre>
+<p>Заглавия като част от самата таблица можете да зададете между таговете <text>&lt;th&gt;</text> и <text>&lt;/th&gt;</text>, а заглавиетo на самата таблица се указва между <text>&lt;caption&gt;</text> и <text>&lt;/caption&gt;</text>. Браузърът автоматично ще открои заглавията, зададени с <text>&lt;th&gt;</text> - обикновено с удебелен шрифт. В горния пример заглавия са <text>Month</text> и <text>Savings</text>.</p>	 
+<p>За да се покаже рамката на таблицата, трябва да укажете това изрично с <text>border="a"</text> в тага <text>&lt;table&gt;</text>, като на мястото на "а" сложите желаната дебелина на рамката в пиксели. Ако не искате таблицата да има рамка, просто не използвайте border - по подразбиране таблиците се показват без рамки. Горната таблица без рамки изглежда по следния начин:</p>	 
+<table>
+  <tr>
+    <th>Month</th>
+    <th>Savings</th>
+  </tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td>
+  </tr>
+</table>
+
+  <pre>
+	<div class="box">
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Month&lt;/th&gt;
+    &lt;th&gt;Savings&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;January&lt;/td&gt;
+    &lt;td&gt;$100&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+	</div>
+</pre>
+
+<p>Най-често използваните атрибути при форматирането на таблици са:</p>
+<ol>
+  <li>
+     <text>border</text> - задава големина на рамката на таблицата в пиксели
+  </li>
+  <li>
+     <text>bordercolor</text> - задава цвят на рамката
+  </li>
+  <li>
+     <text>bgcolor</text> - задава цвят като фон на таблицата
+  </li>
+  <li>
+     <text>width</text> - задава ширина на таблицата в пиксели и в процент от ширината на екрана, може да се прилага на &lt;tr&gt; и &lt;td&gt;
+  </li>
+  <li>
+     <text>height</text> - задава височина на таблицата в пиксели, и в процент от ширината на екрана може да се прилага на &lt;tr&gt; и &lt;td&gt;
+  </li>
+  <li>
+     <text>cellspacing</text> - задава разстояние между отделните клетки на таблицата
+  </li>
+  <li>
+     <text>cellpadding</text> - задава разстояние между текста и/или изображенията, разположени в клетките и очертанията на клетките
+  </li>
+  <li>
+     <text>align</text> - задава хоризонталното местоположение на таблицата на екрана. Атрибута може да се присвоява на &lt;tr&gt; и &lt;td&gt;, тогава определя къде да се разположи съдържанието в клетките
+  </li>
+  <li>
+     <text>valign</text> - задава вертикалното местоположение на текста/графиките в клетките
+  </li>
+  <li>
+     <text>colspan</text> - определя колко колони ще обхваща един ред
+  </li>
+  <li>
+     <text>rowspan</text> - определя колко реда ще обхваща еднa колона
+  </li>
+</ol>
+<p>Ако искате дадена клетка да заема примерно две колони, укажете това с <text>colspan="2"</text>. Съответно за да заеме клетката две редици, трябва да включите <text>rowspan="2"</text> в тага <text>&lt;td&gt;</text> или <text>&lt;th&gt;</text>, с който създавате съответната клетка. Например:</p>
+<table border="1">
+<tr>
+    <td rowspan="3">Лява колона, обединяваща 3 реда</td>
+    <td colspan="3">Горен ред, обединяващ 3 колони</td>
+    <td rowspan="3">Дясно колона, обединяваща 3 реда</td>
+</tr>
+<tr>
+    <td>2-и ред, 1-ва колона</td>
+    <td>2-и ред, 2-а колона</td>
+    <td>2-и ред, 3-а колона</td>
+</tr>
+<tr>
+    <td colspan="3">3-ри ред, обединяващ 3 колони</td>
+</tr>
+</table>
+<pre>
+	<div class="box">
+&lt;table border="1"&gt;
+&lt;tr&gt;
+    &lt;td rowspan="3"&gt;Лява колона, обединяваща 3 реда&lt;/td&gt;
+    &lt;td colspan="3"&gt;Горен ред, обединяващ 3 колони&lt;/td&gt;
+    &lt;td rowspan="3"&gt;Дясно колона, обединяваща 3 реда&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;2-и ред, 1-ва колона&lt;/td&gt;
+    &lt;td&gt;2-и ред, 2-а колона&lt;/td&gt;
+    &lt;td&gt;2-и ред, 3-а колона&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td colspan="3"&gt;3-ри ред, обединяващ 3 колони&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+	</div>
+</pre>
+<p>Разстоянието от рамката на клетката до нейното съдържание се задава с <text>cellpadding="a"</text>, като "a" е число в пиксели. Разстоянието от рамката на таблицата до самите клетки от своя страна се указва с <text>cellspacing="a"</text>. И двете разстояния се указват още в началното <text>&lt;table&gt;</text>. Примерната таблица с разстояние от рамката на клетката до нейното съдържание равно на 10, изглежда по следния начин:</p>
+<table border="2" cellpadding="10">
+  <tr>
+    <th>Month</th>
+    <th>Savings</th>
+  </tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td>
+  </tr>
+</table>
+<pre>
+	<div class="box">
+&lt;table border="2"  cellpadding="10"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Month&lt;/th&gt;
+    &lt;th&gt;Savings&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;January&lt;/td&gt;
+    &lt;td&gt;$100&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+	</div>
+</pre>
+
+
+
+<p></p>
+<a class="button button1" href="cv.html" target="_blank">Автобиография направена чрез таблици</a>
+</div>
+  <script src="javamenu.js"></script>
+</body>
+</html>

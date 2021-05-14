@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learn HTML</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+<a name="topofthepage"></a>
+<div class="header">
+<img src="logo.png" alt="HTML Logo" width="8%" height="10%">
+<p style="position:absolute; bottom:0; right:0; padding-right: 13%; color:#009966; font-size: 50px">Learn HTML</p>
+</div>
+
+<div id="navbar">
+  <a href="index.html">Начало</a>
+  <a href="FirstSteps.html">Въведение</a>
+  <a href="text.html">Текст</a>
+  <a href="colors.html">Цветове</a>
+  <a href="lists.html">Списъци</a>
+  <a href="MetaTags.html">META тагове</a>
+  <a href="pictures.html">Изображения</a>
+  <a href="tables.html">Таблици</a>
+  <a class="active" href="javascript:void(0)">Хиперлинкове</a>
+  <a href="frames.html">Рамки</a>
+</div>
+
+
+<div class="content">
+  <p>Един от най-често срещаните елементи в една HTML страница, е тагът за хипервръзка (препратка, линк). В един HTML документ може да се добавят линкове към други документи или ресурси, които може да се намират на същия сървър или на външен за сайта сървър. Препратки (хипервръзки или още линкове) към интернет страници се задават с двойката тагове <text>&lt;а&gt;</text> и <text>&lt;/а&gt;</text> - съответно за начало и за край, като те могат да заграждат както текст, така и графично изображение.</p>
+  <p>Адресът на страницата, към която е хипервръзката, се задава като атрибут на тага <text>&lt;а&gt;</text> с израза <text>href=</text> и ограждане с кавички. Самият текст, който ще се извежда на екрана, се разполага между <text>&lt;а&gt;</text> и <text>&lt;/а&gt;</text>.</p>
+  <pre>
+	<div class="box">
+&lt;!DOCTYPE html&gt;
+&lt;HTML&gt;
+&lt;HEAD>
+&lt;TITLE&gt;Хиперлинкове&lt;/TITLE&gt;
+&lt;/HEAD&gt;
+&lt;BODY&gt;
+ &lt;a href="index.html"&gt;
+   Връзка към самоучителя
+&lt;/a&gt;
+&lt;/BODY&gt;
+&lt;/HTML&gt;
+	</div>
+</pre>
+<a class="button button1" href="hyperlinkspr1.html" target="_blank">Пример</a>
+  <p>Понякога е желателно страниците, към които сте сложили хипервръзки, да се отварят в нов прозорец на браузъра. Такъв е случая, когато препратките са към външни за сайта Ви страници - потребителите може и да не се върнат към сайта Ви след като веднъж са излезли от него. За да си запазите присъствие на екрана, отворете външните линкове в нов прозорец като укажете за хипервръзката атрибут <text>target</text> със стойност <text>"_blank"</text></p>
+   <pre>
+	<div class="box">
+&lt;!DOCTYPE html&gt;
+&lt;HTML&gt;
+&lt;HEAD>
+&lt;TITLE&gt;Хиперлинкове&lt;/TITLE&gt;
+&lt;/HEAD&gt;
+&lt;BODY&gt;
+ &lt;a href="index.html"  target="_blank"&gt;
+   Връзка към самоучителя в нов прозорец
+&lt;/a&gt;
+&lt;/BODY&gt;
+&lt;/HTML&gt;
+	</div>
+</pre>
+<a class="button button1" href="hyperlinkspr2.html" target="_blank">Пример</a>
+<p>Атрибута <text>target</text> определя къде да бъде отворена новата страница. Целевият атрибут може да има една от следните стойности:</p>
+ <ol>
+  <li>
+     <text>_blank</text> - Отваря свързания документ в нов прозорец или раздел
+  </li>
+  <li>
+     <text>_self</text> - Отваря свързания документ в същия прозорец / раздел, в който е щракнат (това е по подразбиране)
+  </li>
+  <li>
+     <text>_parent</text> - Отваря свързания документ в основната рамка
+  </li>
+  <li>
+     <text>_top</text> - Отваря свързания документ в цялото тяло на прозореца
+  </li>
+  <li>
+     <text>framename</text> - Отваря свързания документ в име на рамка
+  </li>
+</ol>
+
+  <p>По подразбиране връзките се показват по следния начин:</p>
+  <ul>
+  <li>
+     Непосещавана връзка е подчертана и синя
+  </li>
+  <li>
+     Посетената връзка е подчертана и лилава
+  </li>
+  <li>
+     Активната връзка е подчертана и червена
+  </li>
+  </ul>
+  
+  <p>HTML ни позволява да променяме и тези pараметри като използваме съответните атрибути в отварящия таг <text>&lt;body&gt;</text>. Тези атрибути са:</p>
+  <ul>
+  <li>
+     <text>link</text> - задава цвят на непосочените връзки
+  </li>
+  <li>
+     <text>alink</text> - задава цвят на активната връзка
+  </li>
+  <li>
+     <text>vlink</text> - задава цвят на посетена връзка
+  </li>
+  </ul>
+  <p>Освен към външни страници и към страници от един и същ сайт, препратките може да водят и към различни части в една и съща страница. Това е подходящо за дълги страници, за да не скролират посетителите в търсене на нужната информация. Създава се т.нар. "котва" чрез атрибута <text>name</text> на тага <text>&lt;а&gt;</text> и се поставя на мястото от страницата, към което ще води връзката. "Котвата" трябва да има следния формат:</p>
+  <pre>
+	<div class="box">
+&lt;a name="topofthepage"&gt;&lt;/a&gt;
+	</div>
+  </pre>
+  <p>Котвата се поставя в онази част от страница, към която ще води връзката. Ако например връзката ще бъде към дъното на страницата, котвата се поставя в долната част на секцията BODY на страницата. За да има ефект тази препратка, страницата трябва да е дълга. Поставя се самата връзка, която ще води към вече направената котва. Тя трябва да изглежда така:</p>
+  <pre>
+	<div class="box">
+&lt;a href="#topofthepage"&gt;
+   Връзка към началото на страницата
+&lt;/a&gt;
+	</div>
+  </pre> 
+  <a class="button button1" href="#topofthepage">Връзка към началото на страницата</a>
+  <p>Освен текст за препратките може да служат и изображенията (картинки, снимки и пр.). За да се ползва едно изображение като препратка, трябва да се напише код, подобен на следния:</p>
+  <pre>
+	<div class="box">
+&lt;a href="index.html" target="_blank"&gt;
+   &lt;img src="hyperlink.png" /&gt;
+&lt;/a&gt;
+	</div>
+</pre>
+<a href="index.html" target="_blank">
+   <img src="hyperlink.png " width="200" height="200" />
+</a>
+<p></p>
+<a class="button button1" href="calc.html" target="_blank">Хиперлинк към калкулатор</a>
+</div>
+  <script src="javamenu.js"></script>
+</body>
+</html>

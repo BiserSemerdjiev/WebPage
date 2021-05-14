@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learn HTML</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+
+<div class="header">
+<img src="logo.png" alt="HTML Logo" width="8%" height="10%">
+<p style="position:absolute; bottom:0; right:0; padding-right: 13%; color:#009966; font-size: 50px">Learn HTML</p>
+</div>
+
+<div id="navbar">
+  <a href="index.html">Начало</a>
+  <a href="FirstSteps.html">Въведение</a>
+  <a href="text.html">Текст</a>
+  <a href="colors.html">Цветове</a>
+  <a class="active" href="javascript:void(0)">Списъци</a>
+  <a href="MetaTags.html">META тагове</a>
+  <a href="pictures.html">Изображения</a>
+  <a href="tables.html">Таблици</a>
+  <a href="Hyperlinks.html">Хиперлинкове</a>
+  <a href="frames.html">Рамки</a>
+</div>
+
+
+<div class="content">
+<p>Когато в HTML страницата е нужно да се направи изброяване на някакви елементи, в тези случаи е подходящо да се използват специалните тагове на HTML за списъци. Чрез таговете за списъци информацията ще се представи в подреден вид на страницата. Най-често използваните списъци са подредените (ordered list) и неподредените (unordered lists). В този урок ще разгледаме следните видове HTML списъци:</p>
+<ol>
+  <li>
+     Неподредени (unordered list) - <text>&lt;ul&gt;</text> <text>&lt;/ul&gt;</text>. Отделните елементи на списъка се открояват с един и същи графичен знак: кръгче, квадрат, отметка и т.н. - каквото укажете.
+  </li>
+  <li>
+     Подредени (ordered list) - <text>&lt;ol&gt;</text> <text>&lt;/ol&gt;</text>. Изброените неща в списъка получават свой номер: римски, арабски цифри, латински малки или главни букви в азбучен ред и т.н.
+  </li>
+  <li>
+     Списъци от дефиниции (definition lists) - <text>&lt;dl&gt;</text> <text>&lt;/dl&gt;</text>. С този тип списъци можете да изброявате елементи и заедно с това да давате техни определения (дефиниции).
+  </li>
+</ol>
+<p>Неподредения списък започва с тага <text>&lt;ul&gt;</text>. Всеки ред/предмет от списъка се създава със <text>&lt;li&gt;</text> таг. Всеки предмет (item) обикновено се отбелязва (от браузъра) с малка черна точка (bullet). Пример:</p>
+<ul>
+   <li>
+      HTML
+   </li>
+   <li>
+      CSS
+   </li>
+   <li>
+      JavaScript
+   </li>
+</ul>
+<pre>
+	<div class="box">
+&lt;ul&gt;
+   &lt;li&gt;
+      HTML
+   &lt;/li&gt;
+   &lt;li&gt;
+      CSS
+   &lt;/li&gt;
+   &lt;li&gt;
+      JavaScript
+   &lt;/li&gt;
+&lt;/ul&gt;
+	</div>
+</pre>
+
+<p>При задаване на този код браузърът изобразява списъка с автоматичен отстъп от лявото поле. Не е нужно и да се изписва тага за преминаване на следващ ред <text>&lt;br&gt;</text>, тъй като това също става автоматично. Автоматично се добавя и по един празен ред над и под списъка. Знакът, който се появява пред всеки ред в списъка, е по подразбиране черен запълнен кръг. Другите възможни начини за изброяване са:</p>
+<ol>
+  <li>
+     <text>disc</text> - запълнен кръг, като този по подразбиране
+  </li>
+  <li>
+     <text>circle</text> - незапълнен кръг
+  </li>
+  <li>
+     <text>square</text> - запълнен квадрат
+  </li>
+</ol>
+
+<p>За да създадем един неподреден списък с различни символи трябва да зададем атрибута <text>type</text> в отварящия таг за всеки елемент от списъкa <text>&lt;li&gt;</text>:</p>
+<ul>
+   <li type="circle">
+      HTML
+   </li>
+   <li type="disc">
+      CSS
+   </li>
+   <li type="square">
+      JavaScript
+   </li>
+</ul>
+<pre>
+	<div class="box">
+&lt;ul&gt;
+   &lt;li type="circle"&gt;
+      HTML
+   &lt;/li&gt;
+   &lt;li type="disc"&gt;
+      CSS
+   &lt;/li&gt;
+   &lt;li type="square"&gt;
+      JavaScript
+   &lt;/li&gt;
+&lt;/ul&gt;
+	</div>
+</pre>
+
+<p>Подредените списъци започват с <text>&lt;ol&gt;</text> таг. Всеки ред/предмет от списъка се създава със <text>&lt;li&gt;</text> таг. Всеки пореден предмет от списъка започва с арабско число (ако не е променено). Възможно е да се използват римски числа или букви.</p>
+<ol>
+   <li>
+      HTML
+   </li>
+   <li>
+      CSS
+   </li>
+   <li>
+      JavaScript
+   </li>
+</ol>
+<pre>
+	<div class="box">
+&lt;ol&gt;
+   &lt;li&gt;
+      HTML
+   &lt;/li&gt;
+   &lt;li&gt;
+      CSS
+   &lt;/li&gt;
+   &lt;li&gt;
+      JavaScript
+   &lt;/li&gt;
+&lt;/ol&gt;
+	</div>
+</pre>
+
+<p>Обърнете внимание, че в кода не се изписват никакви цифри – те се задават автоматично. Автоматичното задаване важи само за списъците, номерирани с арабски цифри. За всеки от останалите подредени списъци е нужно изрично да се укаже техния тип. Това става чрез атрибута <text>type</text> в отварящия таг <text>&lt;ol&gt;</text>. Атрибута <text>type</text> може да заема следните стойности:</p>
+<ol>
+  <li>
+     <text>type="1"</text> - номерация с арабски цифри, като тази по подразбиране
+  </li>
+  <li>
+     <text>type="I"</text> - номерация с големи римски цифри
+  </li>
+  <li>
+     <text>type="i"</text> - номерация с малки римски цифри
+  </li>
+  <li>
+     <text>type="A"</text> - номерация с големи латински букви
+  </li>
+  <li>
+     <text>type="a"</text> - номерация с малки латински букви
+  </li>
+</ol>
+<p>Подреден списък, номериран с римски цифри:</p>
+<ol type="I">
+   <li>
+      HTML
+   </li>
+   <li>
+      CSS
+   </li>
+   <li>
+      JavaScript
+   </li>
+</ol>
+<pre>
+	<div class="box">
+&lt;ol type="I"&gt;
+   &lt;li&gt;
+      HTML
+   &lt;/li&gt;
+   &lt;li&gt;
+      CSS
+   &lt;/li&gt;
+   &lt;li&gt;
+      JavaScript
+   &lt;/li&gt;
+&lt;/ol&gt;
+	</div>
+</pre>
+
+<p>Описателните списъци се използват за въвеждането на термини, с описание към всеки един термин. Описателните списъци се създават с тага <text>&lt;dl&gt;</text>. Всеки термин се подава със <text>&lt;dt&gt;</text> таг, а описанието с <text>&lt;dd&gt;</text>. При тези списъци не се изобразяват символи в началото на реда, но вие може да укажете собствени символи. Пример:</p>
+<dl>
+   <dt>
+      Домейн
+   </dt>
+   <dd>
+      -това е името на уебсайта в Уеб.
+   </dd>
+
+   <dt>
+      Хостинг
+   </dt>
+   <dd>
+      -това е мястото, на което се намират файловете на сайта.
+   </dd>
+</dl>
+<pre>
+	<div class="box">
+&lt;dl&gt;
+   &lt;dt&gt;
+      Домейн
+   &lt;/dt&gt;
+   &lt;dd&gt;
+      -това е името на уебсайта в Уеб.
+   &lt;/dd&gt;
+   &lt;dt&gt;
+      Хостинг
+   &lt;/dt&gt;
+   &lt;dd&gt;
+      -това е мястото, на което се намират файловете на сайта.
+   &lt;/dd&gt;
+&lt;/dl&gt;
+	</div>
+</pre>
+</div>
+  <script src="javamenu.js"></script>
+</body>
+</html>

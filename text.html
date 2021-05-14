@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learn HTML</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+
+<div class="header">
+<img src="logo.png" alt="HTML Logo" width="8%" height="10%">
+<p style="position:absolute; bottom:0; right:0; padding-right: 13%; color:#009966; font-size: 50px">Learn HTML</p>
+</div>
+
+<div id="navbar">
+  <a href="index.html">Начало</a>
+  <a href="FirstSteps.html">Въведение</a>
+  <a class="active" href="javascript:void(0)">Текст</a>
+  <a href="colors.html">Цветове</a>
+  <a href="lists.html">Списъци</a>
+  <a href="MetaTags.html">META тагове</a>
+  <a href="pictures.html">Изображения</a>
+  <a href="tables.html">Таблици</a>
+  <a href="Hyperlinks.html">Хиперлинкове</a>
+  <a href="frames.html">Рамки</a>
+</div>
+
+
+<div class="content">
+<p>Текстът в HTML може да се форматира по много различни начини: изменяне дебелината на шрифта, посоката, наклона и големината на текста, отделяне на текст като вмъкнат, изтрит или като цитат и др. За нагледен пример служат самите заглавия на отделните видове формат.</p>
+<p><b>Получер текст</b></p>
+<p>Задава се с двойката тагове <text>&lt;b&gt;</text> и <text>&lt;/b&gt;</text> . Същият ефект има и използването на <text>&lt;strong&gt;</text> и <text>&lt;/strong&gt;</text>:</p>
+<pre>
+	<div class="box">
+&lt;b&gt;Получер текст&lt;/b&gt;
+&lt;strong&gt;Получер текст&lt;/strong&gt;
+	</div>
+</pre>
+<p><i>Курсивен текст</i></p>
+<p>Огражда се с таговете <text>&lt;i&gt;</text> и <text>&lt;/i&gt;</text>. Алтернативно може да се използват и таговете <text>&lt;em&gt;</text> и <text>&lt;/em&gt;</text>:</p>
+<pre>
+	<div class="box">
+&lt;i&gt;Курсивен текст&lt;/i&gt;
+&lt;em&gt;Курсивен текст&lt;/em&gt;
+	</div>
+</pre>
+<p><u>Подчертан текст</u></p>
+<p>Mоже да се зададе с таговете <text>&lt;u&gt;</text> и <text>&lt;/u&gt;</text>. Сега обаче употребата на <text>&lt;u&gt;</text> и <text>&lt;/u&gt;</text> не се препоръчва. Вместо това използвайте стилове.</p>
+<pre>
+	<div class="box">
+&lt;u&gt;Подчертан текст&lt;/u&gt;
+	</div>
+</pre>
+<p><big>Уголемен текст</big></p>
+<p>Можете да откроите даден текст като по-голям с таговете <text>&lt;big&gt;</text> и <text>&lt;/big&gt;</text>:</p>
+<pre>
+	<div class="box">
+&lt;big&gt;Уголемен текст&lt;/big&gt;
+	</div>
+</pre>
+</pre>
+<p><small>Умален текст</small></p>
+<p>Ако оградите дадена фраза с таговете <text>&lt;small&gt;</text> и <text>&lt;/small&gt;</text>, тази фраза ще бъде показана с по-малък размер от останалия текст:</p>
+<pre>
+	<div class="box">
+&lt;small&gt;Умален текст&lt;/small&gt;
+	</div>
+</pre>
+<p><sup>Горен</sup> индекс</p>
+<p>Указва се с таговете <text>&lt;sup&gt;</text> и <text>&lt;/sup&gt;</text>:</p>
+<pre>
+	<div class="box">
+&lt;sup&gt;Горен&lt;/sup&gt; индекс
+	</div>
+</pre>
+<p><sub>Долен</sub> индекс</p>
+<p>От своя страна долен индекс се задава с <text>&lt;sub&gt;</text> и <text>&lt;/sub&gt;</text>:</p>
+<pre>
+	<div class="box">
+&lt;sub&gt;Долен&lt;/sub&gt; индекс
+	</div>
+</pre>
+<p><ins>Вмъкнат текст</ins></p>
+<p>За да откроите даден текст като вмъкнат, оградете го с таговете <text>&lt;ins&gt;</text> и <text>&lt;/ins&gt;</text>. Обърнете внимание, че браузърът ще представи подобен текст като подчертан.</p>
+<pre>
+	<div class="box">
+&lt;ins&gt;Вмъкнат текст&lt;/ins&gt;
+	</div>
+</pre>
+<p><del>Изтрит текст</del></p>
+<p>Ако искате да подчертаете, че даден текст е изтрит (много чест похват при промоции с наблягане на факта колко висока е старата цена), използвайте <text>&lt;del&gt;</text> и <text>&lt;/del&gt;</text>:</p>
+<pre>
+	<div class="box">
+&lt;del&gt;Изтрит текст&lt;/del&gt;
+	</div>
+</pre>
+<p><q>Цитиран</q> текст</p>
+<p>За кратки цитати използвайте <text>&lt;q&gt;</text> и <text>&lt;/q&gt;</text>:</p>
+<pre>
+	<div class="box">
+&lt;q&gt;Цитиран&lt;/q&gt; текст
+	</div>
+</pre>
+<p>Обърнете внимание, че използването на таговете <text>&lt;q&gt;</text> и <text>&lt;/q&gt;</text> просто огражда цитирания текст с кавички. Ако искате да откроите по-голям цитат, използвайте таговете <text>&lt;blockquote&gt;</text> и <text>&lt;/blockquote&gt;</text></p>
+
+
+
+
+
+
+
+
+
+
+
+<p>Друг важен таг при форматирането на текст е тага <text>&lt;br&gt;</text>. Този таг е единичен и на него не отговаря затварящ таг. Използва се за минаване на нов ред, на мястото където е поставен тага. Вижте следващия пример:</p>
+
+<p>Текст, разположен<br> на два редa.</p>
+<pre>
+	<div class="box">
+Текст, разположен&lt;br&gt; на два редa.
+	</div>
+</pre>
+
+<p>За промяна на шрифта на текст в HTML използваме <text>face</text>. Ако на <text>face</text> не е зададена стойност, браузъра показва щрифт по подразбиране. Ако държите обаче текса да се показва с някакъв определен шриф, трябва да го зададете:</p>
+<pre>
+	<div class="box">
+&lt;font face="Arial"&gt; Това е текст със шрифт Arial.&lt;/FONT&gt;
+&lt;font face="Times New Roman"&gt; Това е текст със шрифт Times New Roman.&lt;/FONT&gt;
+	</div>
+</pre>
+
+<p> Ако е необходимо текстът да изглежда по същия начин, по който е зададен в източника, използваме таговете <text>&lt;pre&gt;</text> и <text>&lt;/pre&gt;</text>. Когато използваме този таг, текста се показва с разстояния и нови редове, без да използваме специални тагове.</p>
+
+<p>За вмъкване на коментар в HTML кода използваме таговете <text>&lt;!-- и --&gt;</text>. Коментарът няма да бъде интерпретитан и съответно изобразен в полето на документа. Текста може да бъде многоредов, като не трябва да съдържа две последователни тирета "--".</p>
+
+</div>
+  <script src="javamenu.js"></script>
+</body>
+</html>

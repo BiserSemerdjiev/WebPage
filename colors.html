@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learn HTML</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+
+<div class="header">
+<img src="logo.png" alt="HTML Logo" width="8%" height="10%">
+<p style="position:absolute; bottom:0; right:0; padding-right: 13%; color:#009966; font-size: 50px">Learn HTML</p>
+</div>
+
+<div id="navbar">
+  <a href="index.html">Начало</a>
+  <a href="FirstSteps.html">Въведение</a>
+  <a href="text.html">Текст</a>
+  <a class="active" href="javascript:void(0)">Цветове</a>
+  <a href="lists.html">Списъци</a>
+  <a href="MetaTags.html">META тагове</a>
+  <a href="pictures.html">Изображения</a>
+  <a href="tables.html">Таблици</a>
+  <a href="Hyperlinks.html">Хиперлинкове</a>
+  <a href="frames.html">Рамки</a>
+</div>
+
+
+<div class="content">
+  <p>Цветовете на компютърния екран се образуват от смесването на три основни цвята: червен, зелен и син. За да се укаже на браузъра даден цвят, интензитетът на всеки от тези три основни цвята се представя като число със стойност от 0 до 255, като 0 съответства на минимална, а 255 - на максимална интензивност. Когато използвате десетични числа, указването на цвят става с rgb(), като в скобите се изброяват последователно интензитета за червен, зелен и син цвят. Интензитетът за трите цвята по-често се записва в шестнадесетичен вид (hex)- например на 255 съответства FF. Когато цвета се задава като hex стойност, се използва знак #, следван от трите двуцифрени числа за червено, зелено и синьо. Например #<span style="color: #ff0000">00</span><span style="color: #00e600">00</span><span style="color: #0066ff">00</span>, #<span style="color: #ff0000">FF</span><span style="color: #00e600">FF</span><span style="color: #0066ff">FF</span>, #<span style="color: #ff0000">4D</span><span style="color: #00e600">4D</span><span style="color: #0066ff">00</span>.</p>
+  <p>Примери за кодове на цветове, оцветени в цвета, който представят: <span style="color: #3399ff">#3399ff</span>, <span style="color: #ff4d4d">#ff4d4d</span>, <span style="color: #cc00cc">#cc00cc</span>, <span style="color: #009900">#009900</span>, <span style="color: #ffcc00">#ffcc00</span>. Освен с шестнадесетични кодове, цветовете в HTML могат да бъдат представени и със своите RGB, HSL, RGBA или HSLA кодове. Например <span style="color: #ff8000">#ff8000</span>, <span style="color: rgb(255, 128, 0)">rgb(255, 128, 0)</span> и <span style="color: hsl(30, 100%, 50%)">hsl(30, 100%, 50%)</span> представят един и същи цвят.</p>
+  <p>Използвайки тези цветове можем да променяме фона на страницата, цвета на текста, цвета на рамки на таблици и много други елементи от страницата. За да променим фона на цялата страница използваме параметъра <text>bgcolor</text> в елемента <text>body</text>, за промяна на цвета на текста за цялата страница използваме параметъра <text>text</text>, като в кавички задаваме стойноста на цвета, който искаме да използваме, в шестнадесетичен или rgb код.</p>
+  <pre>
+	<div class="box">
+&lt;!DOCTYPE html&gt;
+&lt;HTML&gt;
+&lt;HEAD&gt;
+    &lt;TITLE&gt;Цветен фон и цветен текст&lt;/TITLE&gt;
+&lt;/HEAD&gt;
+ &lt;BODY bgcolor="#4da6ff" text="#008000"&gt;
+      Тази страница е на син фон със зелен текст!
+ &lt;/BODY&gt;
+&lt;/HTML&gt;
+	</div>
+</pre>
+  <a class="button button1" href="colorspr2.html" target="_blank">Пример</a>
+  <p>Цветовете в HTML са често използвани при създаването на таблици. Можем да променяме цвета на текста в таблицата, цвета на нейните рамки, както и фона на таблицата. За цвета на ракмите използваме параметъра <text>bordercolor</text>, а за фона на таблицата <text>bgcolor</text>.</p>
+  <table bordercolor="#00994d" border="2" bgcolor="#e6e6e6" >
+  <tr>
+    <th>Month</th>
+    <th>Savings</th>
+  </tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td>
+  </tr>
+</table>
+  <p>За създаването на тази примерна таблица, кодът е:</p>
+  <pre>
+	<div class="box">
+&lt;table bordercolor="#00994d" border="2" bgcolor="#e6e6e6" &gt;
+  &lt;tr&gt;
+    &lt;th&gt;Month&lt;/th&gt;
+    &lt;th&gt;Savings&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;January&lt;/td&gt;
+    &lt;td&gt;$100&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+	</div>
+</pre>
+<p>В елемента <text>table</text>, с параметри bordercolor="<text>#00994d</text>" и bgcolor="<text>#e6e6e6</text>", сме задали съответно цвят на рамките и фона на таблицата. </p>
+</div>
+  <script src="javamenu.js"></script>
+</body>
+</html>
